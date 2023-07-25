@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CEP</title>
+        <link rel="shortcut icon" href="./img/js.png" type="image/x-icon" />
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            form {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto;
+                gap: 4px;
+            }
+
+            h2 {
+                margin: 16px auto 16px;
+            }
+
+            form > div {
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                margin-bottom: 10px;
+                max-width: 300px;
+            }
+            input {
+                max-width: 230px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <h2>Buscar por CEP</h2>
+            <div>
+                <label for="">CEP</label>
+                <input autocomplete="no" type="text" name="cep" id="cep" />
+            </div>
+            <div>
+                <label for="">Rua</label>
+                <input type="text" name="rua" id="rua" />
+            </div>
+            <div>
+                <label for="">Bairro</label>
+                <input type="text" name="bairro" id="bairro" />
+            </div>
+            <div>
+                <label for="">Cidade</label>
+                <input type="text" name="cidade" id="cidade" />
+            </div>
+            <div>
+                <label for="">Estado</label>
+                <input type="text" name="estado" id="estado" />
+            </div>
+        </form>
+        <script>
+            document.querySelector("#cep").addEventListener("keyup", buscar);
+            const inputs = document.querySelectorAll("input");
+            const http = new XMLHttpRequest();
+
+            function buscar() {
+                if (this.value.length == 8) {
+                    http.open("GET", "https://viacep.com.br/ws/" + this.value + "/json/");
+                    http.send();
+                    http.onload = () => {
+                        let resposta = JSON.parse(http.response).erro;
+                        if (!resposta) {
+                            let json = JSON.parse(http.response);
+                            inputs[1].value = json.logradouro;
+                            inputs[2].value = json.bairro;
+                            inputs[3].value = json.localidade;
+                            inputs[4].value = json.uf;
+                        } else {
+                            inputs.forEach((i) => {
+                                i.value = "";
+                            });
+                            alert("CEP INVÁLIDO!");
+                        }
+                    };
+                }
+            }
+        </script>
+    </body>
+</html>

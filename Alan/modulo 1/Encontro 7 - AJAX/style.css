@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 300px;
+    margin: 10px auto auto;
+}
+
+.demo {
+    border: solid 1px #000000;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    overflow: scroll;
+}
