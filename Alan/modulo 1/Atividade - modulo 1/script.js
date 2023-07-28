@@ -1,0 +1,1 @@
+var contador = 0;

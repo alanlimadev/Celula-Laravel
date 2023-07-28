@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atividade - Módulo 1</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div class="principal">
+            <header>
+                <div class="iconeLaravel">
+                    <img class="imgLaravel" src="./img/laravel8.png" alt="" />
+                </div>
+                <div class="pesquisa">
+                    <div class="busca">
+                        <input class="produtos" type="text" placeholder="Buscar produtos" value="" />
+                    </div>
+                    <div>
+                        <a href="">CAMISA</a>
+                        <a href="">SAPATOS</a>
+                        <a href="">ÓCULOS</a>
+                        <a href="">CALÇAS</a>
+                        <a href="">UTILITÁRIOS</a>
+                    </div>
+                </div>
+                <div class="acesso">
+                    <a href="">Login</a>
+                    <a href="">Cadastrar-se</a>
+                </div>
+            </header>
+
+            <section>
+                <div class="produtoSelecionado">
+                    <div>
+                        <img class="tipoia" src="./img/tipoia.webp" alt="" />
+                    </div>
+                    <div class="informacoesProduto">
+                        <h2>TIPOIA VELPEAU STANDARD</h2>
+                        <h2>HIDROLIGHT</h2>
+                        <h5>Vendido por <a href="">ORTHOBORGES</a></h5>
+                    </div>
+                    <div class="selecionarQuant">
+                        <div onclick="alert('menos 1')" class="imgSelecao">
+                            <img src="./img/remove.svg" alt="" />
+                        </div>
+                        <div>
+                            <h2 class="quantidade">0</h2>
+                        </div>
+                        <div onclick="alert('mais 1')" class="imgSelecao">
+                            <img src="./img/add.svg" alt="" />
+                        </div>
+                        <div>
+                            <h2>R$ 65,00</h2>
+                        </div>
+                        <div class="imgSelecao">
+                            <img src="./img/trash.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <div class="bL">
+                    <div class="barraLateral">
+                        <h3>Dados para a entrega</h3>
+                        <div class="inserirCEP">
+                            <h4>Insira o CEP</h4>
+                            <input type="text" />
+                        </div>
+                        <hr />
+                        <h3>Simulação de frete e entrega</h3>
+                        <div class="opcoesEntrega">
+                            <label>
+                                <input type="radio" />
+                                PAC
+                            </label>
+                            <label>
+                                <input type="radio" />
+                                SEDEX
+                            </label>
+                        </div>
+                        <hr />
+                        <h3>Custos</h3>
+                        <div class="custos">
+                            <p>Produtos:</p>
+                            <p>Frete:</p>
+                            <p class="valorTotal">Valor Total:</p>
+                        </div>
+                        <button>Proseguir com a compra</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
