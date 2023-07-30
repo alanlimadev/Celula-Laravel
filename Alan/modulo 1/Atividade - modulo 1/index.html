@@ -6,6 +6,7 @@
         <title>Atividade - Módulo 1</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+        <script src="https://kit.fontawesome.com/70776c1e31.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="principal">
@@ -17,7 +18,7 @@
                     <div class="busca">
                         <input class="produtos" type="text" placeholder="Buscar produtos" value="" />
                     </div>
-                    <div>
+                    <div class="outrosLinks">
                         <a href="">CAMISA</a>
                         <a href="">SAPATOS</a>
                         <a href="">ÓCULOS</a>
@@ -43,53 +44,52 @@
                     </div>
                     <div class="selecionarQuant">
                         <div onclick="alert('menos 1')" class="imgSelecao">
-                            <img src="./img/remove.svg" alt="" />
+                            <i class="fa-solid fa-minus"></i>
                         </div>
                         <div>
-                            <h2 class="quantidade">0</h2>
+                            <p class="quantidade">0</p>
                         </div>
                         <div onclick="alert('mais 1')" class="imgSelecao">
-                            <img src="./img/add.svg" alt="" />
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                         <div>
                             <h2>R$ 65,00</h2>
                         </div>
                         <div class="imgSelecao">
-                            <img src="./img/trash.svg" alt="" />
+                            <i class="fa-solid fa-trash"></i>
                         </div>
                     </div>
                 </div>
             </section>
 
             <aside>
-                <div class="bL">
-                    <div class="barraLateral">
-                        <h3>Dados para a entrega</h3>
-                        <div class="inserirCEP">
-                            <h4>Insira o CEP</h4>
-                            <input type="text" />
-                        </div>
-                        <hr />
-                        <h3>Simulação de frete e entrega</h3>
-                        <div class="opcoesEntrega">
-                            <label>
-                                <input type="radio" />
-                                PAC
-                            </label>
-                            <label>
-                                <input type="radio" />
-                                SEDEX
-                            </label>
-                        </div>
-                        <hr />
-                        <h3>Custos</h3>
-                        <div class="custos">
-                            <p>Produtos:</p>
-                            <p>Frete:</p>
-                            <p class="valorTotal">Valor Total:</p>
-                        </div>
-                        <button>Proseguir com a compra</button>
+                <div class="barraLateral">
+                    <h3>Dados para a entrega</h3>
+                    <div class="inserirCEP">
+                        <h4>Insira o CEP</h4>
+                        <input type="text" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quaerat corporis nemo co</p>
                     </div>
+                    <hr />
+                    <h3>Simulação de frete e entrega</h3>
+                    <div class="opcoesEntrega">
+                        <label>
+                            <input type="radio" />
+                            PAC
+                        </label>
+                        <label>
+                            <input type="radio" />
+                            SEDEX
+                        </label>
+                    </div>
+                    <hr />
+                    <h3>Custos</h3>
+                    <div class="custos">
+                        <p>Produtos:</p>
+                        <p>Frete:</p>
+                        <p class="valorTotal">Valor Total:</p>
+                    </div>
+                    <button>Proseguir com a compra</button>
                 </div>
             </aside>
         </div>
